@@ -54,7 +54,7 @@ Przykładowe zapytanie z wykorzystaniem wszystkich opcji: `api/raw/admin/terminy
 Jeżeli zapytanie zakończy się pomyślnie zostanie wysłana zmienna 'wiadomosc' z potwierdzeniem <br />
 Jeżeli walidacja zmiennych zakończy się błędem, zostanie wysłana zmienna 'error' z opisem błędu
 
-### - `api/raw/admin/terminy/dodaj`
+### - `api/raw/admin/terminy/usun`
 
 Metoda wysłania: DELETE <br />
 Argumenty:
