@@ -40,7 +40,10 @@ class RezerwacjeObserver
      */
     public function deleted(Rezerwacje $rezerwacje)
     {
-        //
+        $termin = Terminy::find($rezerwacje->terminy_id);
+        $termin->update([
+            'status' => 'wolny'
+        ]);
     }
 
     /**
@@ -62,6 +65,6 @@ class RezerwacjeObserver
      */
     public function forceDeleted(Rezerwacje $rezerwacje)
     {
-        //
+
     }
 }
