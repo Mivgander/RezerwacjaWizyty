@@ -243,9 +243,6 @@ Route::post('terminy/rezerwuj', function(Request $request){
         'terminy_id' => $request->id_terminu
     ]);
 
-    $rezerwacja->terminy->status = 'zarezerwowany';
-    $rezerwacja->terminy->save();
-
     return view('user.wyniki', [
         'error' => 'brak',
         'wiadomosc' => 'Zarezerwowano pomyślnie'
