@@ -89,4 +89,4 @@ Przykładowe zapytanie: `api/terminy/10?email=example@gmail.com&powod_rezerwacji
 Metoda wysłania: DELETE <br />
 Odwołuje rezerwację z podanego terminu <br />
 
-Przykładowe zapytanie: `api/raw/terminy/6`
+Przykładowe zapytanie: `api/terminy/6`
