@@ -78,7 +78,6 @@ Zwraca wszystkie wolne terminy
 
 Metoda wysłania: POST <br />
 Rezerwacja niezarezerwowanego wcześniej terminu <br />
-Argumenty:
 
 - email: wymagany, potrzebny do odróżnienia użytkowników
 - powod_rezerwacji: wymagany, tekst o maksymalnej długości 255 znaków
@@ -89,6 +88,5 @@ Przykładowe zapytanie: `api/terminy/10?email=example@gmail.com&powod_rezerwacji
 
 Metoda wysłania: DELETE <br />
 Odwołuje rezerwację z podanego terminu <br />
-Argumenty:
 
 Przykładowe zapytanie: `api/raw/terminy/6`
