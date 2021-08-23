@@ -56,4 +56,13 @@ class AdminSideController extends Controller
             'wynik' => $wynik
         ];
     }
+
+    function terminyUsun(Terminy $termin)
+    {
+        $wynik = $termin->delete();
+
+        return [
+            'wynik' => $wynik
+        ];
+    }
 }

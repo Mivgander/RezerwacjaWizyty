@@ -41,48 +41,7 @@ Route::put('admin/terminy/aktualizuj/{termin}', [AdminSideController::class, 'te
 /* AKTUALIZACJA TERMINU */
 
 /* USUWANIE TERMINU */
-Route::delete('raw/admin/terminy/usun', function(Request $request){
-    if(!$request->id_terminu) return response()->json([
-        'error' => 'nie znaleziono id terminu'
-    ], 400);
-
-    if(!Terminy::where('id', $request->id_terminu)->exists())
-    {
-        return response()->json([
-            'error' => 'nie znaleziono terminu o podanym id'
-        ], 404);
-    }
-    else
-    {
-        $termin = Terminy::find($request->id_terminu);
-        $termin->delete();
-    }
-
-    return ['wiadomosc' => 'Pomyślnie usunięto termin'];
-});
-
-Route::delete('admin/terminy/usun', function(Request $request){
-    if(!$request->id_terminu) return view('admin.wyniki', [
-        'error' => 'nie znaleziono id terminu'
-    ]);
-
-    if(!Terminy::where('id', $request->id_terminu)->exists())
-    {
-        return view('admin.wyniki', [
-            'error' => 'nie znaleziono terminu o podanym id'
-        ]);
-    }
-    else
-    {
-        $termin = Terminy::find($request->id_terminu);
-        $termin->delete();
-    }
-
-    return view('admin.wyniki', [
-        'error' => 'brak',
-        'wiadomosc' => 'Pomyślnie usunięto termin'
-    ]);
-});
+Route::delete('admin/terminy/usun/{termin}', [AdminSideController::class, 'terminyUsun']);
 /* USUWANIE TERMINU */
 
 

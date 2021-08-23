@@ -45,7 +45,7 @@ class TerminyObserver
      */
     public function deleted(Terminy $terminy)
     {
-        //
+
     }
 
     /**
